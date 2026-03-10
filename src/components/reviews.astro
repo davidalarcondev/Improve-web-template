@@ -1,0 +1,17 @@
+---
+const { opinion, title, stars, color = "bg-white", text = "text-black" } = Astro.props;
+---
+
+<article
+  class={`flex flex-col rounded-2xl border border-slate-800 ${color} p-8 text-white shadow-2xl sm:w-100 md:p-12`}
+>
+  <span class="text-center text-2xl text-yellow-400">{stars}</span>
+
+  <h3 class={`mt-4 text-3xl leading-tight font-bold ${text} md:text-4xl`}>
+    {title}
+  </h3>
+
+  <p class="mt-6 font-mono text-xl leading-relaxed text-slate-400 italic">
+    {opinion}
+  </p>
+</article>
