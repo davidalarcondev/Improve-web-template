@@ -1,0 +1,312 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Reviews from "../components/reviews.astro";
+import Expert from "../components/expert.astro";
+import Prices from "../components/prices.astro";
+import { img1, img2, img3, img4, img5 } from "../assets/index.js";
+const Basic = [
+  "Monthly Tech Audit",
+  "Speed Optimization",
+  "Broken Link/Image Fixes",
+  "24h Support Response",
+  "Automated Asset Health Check",
+];
+const Pro = [
+  "Everything in Basic",
+  "SEO Strategy & Implementation",
+  "UX/UI Tweaks",
+  "Advanced Analytics Setup",
+  "Advanced SEO & Schema Markup",
+  "UX & Conversion Rate Optimization (CRO)",
+];
+const Elite = [
+  "Everything in Pro",
+  "Custom Feature Development",
+  "Dedicated Developer (Slack)",
+  "Conversion Rate Optimization",
+  "High-End Performance & Infrastructure",
+  "Custom Feature Development",
+  "Dedicated Technical Partner",
+];
+---
+
+<BaseLayout
+  title="Improve web"
+  description="A template designed for improve your web."
+  image="/improve-web-template.png"
+>
+  <style is:global slot="head">
+    .fill-progress {
+      animation: fill-bar linear both;
+      animation-timeline: scroll(root);
+      animation-range: 800px 1400px;
+    }
+
+    @keyframes fill-bar {
+      from {
+        width: 0%;
+      }
+      to {
+        background-color: green;
+        width: 100%;
+      }
+    }
+  </style>
+  <section class="flex flex-col items-center px-4">
+    <h1 class="mt-36 text-center font-sans text-6xl font-black text-white md:text-9xl">
+      Improve web
+    </h1>
+    <h2 class="mt-6 max-w-2xl text-center text-xl text-slate-300 md:text-2xl">
+      Your web is the first impression of your company, make it the best one with our help.
+    </h2>
+
+    <h2
+      class="mt-50 max-w-6xl text-center font-sans text-3xl font-black text-slate-300 md:mt-55 md:text-left md:text-7xl"
+    >
+      Ready to see the difference? Let's improve.
+    </h2>
+
+    <div
+      class="mt-10 flex h-auto w-full max-w-6xl flex-col items-center justify-center rounded-2xl border border-slate-800 bg-black p-6 md:mt-20 md:flex-row md:p-12"
+    >
+      <p
+        class="w-full text-center font-mono text-lg leading-relaxed text-slate-400 italic md:w-1/2 md:text-left md:text-xl"
+      >
+        "In a digital economy, milliseconds are the difference between a conversion and a bounce. We
+        don't just build websites; we engineer high-performance digital assets that drive revenue.
+        By prioritizing speed, we enhance user engagement, strengthen brand trust, and ensure your
+        infrastructure is a catalyst for growth rather than a bottleneck."
+      </p>
+
+      <div class="flex w-full justify-center md:w-1/2">
+        <dotlottie-player
+          src="/cover-minivideo.json"
+          speed="0.7"
+          style="width: 100%; max-width: 450px; height: 350px;"
+          playMode="normal"
+          autoplay
+        >
+        </dotlottie-player>
+      </div>
+    </div>
+
+    <h2 class="mt-50 text-center text-3xl font-medium text-slate-300 md:text-5xl">
+      Improve your popularity
+    </h2>
+
+    <div
+      class="mt-20 flex h-90 w-full flex-col items-center justify-center rounded-2xl border border-slate-800 bg-black p-12 xl:w-[48%]"
+    >
+      <p class="mb-4 p-3 font-serif text-xl tracking-tighter text-emerald-400/90 uppercase">
+        Popularity Progress
+      </p>
+
+      <div class="h-8 w-full overflow-hidden rounded-full border border-slate-800 bg-slate-900">
+        <div class="fill-progress h-full w-2 bg-red-500 shadow-[0_0_15px_rgba(16,185,129,0.5)]">
+        </div>
+      </div>
+    </div>
+
+    <h2 class="mt-50 text-center text-3xl font-medium text-slate-300 md:text-5xl">
+      Improve your web experience
+    </h2>
+
+    <div class="mt-20 flex max-w-6xl flex-col items-start justify-center gap-10 lg:flex-row">
+      <article
+        class="flex-1 rounded-2xl border border-slate-800 bg-black p-8 text-white shadow-2xl md:p-12"
+      >
+        <span class="text-2xl text-yellow-400">⭐☆☆☆☆</span>
+
+        <h3 class="mt-4 text-3xl leading-tight font-bold md:text-4xl">
+          Absolute nightmare to use — stay away!
+        </h3>
+
+        <p class="mt-6 font-mono text-lg leading-relaxed text-slate-400 italic">
+          "I honestly don't know where to start. The user interface is a total mess; it feels like
+          it was designed in the early 2000s and never updated..."
+        </p>
+      </article>
+
+      <article
+        class="flex-1 rounded-2xl border border-slate-800 bg-black p-8 text-white shadow-2xl md:p-12"
+      >
+        <span class="text-2xl">⭐⭐⭐⭐⭐</span>
+
+        <h3 class="mt-4 text-3xl leading-tight font-bold md:text-4xl">
+          Game-changer for my workflow — Absolute perfection!
+        </h3>
+
+        <p class="mt-6 font-mono text-lg leading-relaxed text-slate-400 italic">
+          "I am beyond impressed with this platform. The user interface is incredibly sleek and
+          modern; it's clear that user experience was a top priority during development. Navigation
+          is seamless..."
+        </p>
+      </article>
+    </div>
+
+    <h2 class="mt-50 text-center text-3xl font-medium text-slate-300 md:text-5xl">
+      Improve your profits
+    </h2>
+
+    <div
+      class="mt-10 flex h-auto w-full max-w-5xl flex-col items-center justify-center gap-8 rounded-2xl border border-slate-800 bg-black p-6 md:mt-20 md:flex-row md:p-12"
+    >
+      <p
+        class="w-full text-center font-mono text-lg leading-relaxed text-slate-400 italic md:w-1/2 md:text-left md:text-xl"
+      >
+        "From flatlines to breakthroughs. Our tailored promotion strategies are the catalyst your
+        business needs to break sales records. Simple, effective, and results-oriented—just like
+        your new growth curve."
+      </p>
+
+      <div class="w-full md:w-1/2">
+        <dotlottie-player
+          src="/minivideo.json"
+          id="mini-video"
+          style="width: 100%; height: 400px;"
+          playMode="normal"
+        >
+        </dotlottie-player>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-65 flex w-full flex-wrap items-center justify-center gap-10 px-4">
+    <div class="h-full w-full items-center lg:w-1/3">
+      <h2 class="text-center text-3xl font-bold text-slate-300 md:text-7xl">Why trust us?</h2>
+      <h3 class="mt-4 text-center text-[22px] text-slate-400">Opinions of our clients' websites</h3>
+    </div>
+    <div class="flex flex-1 flex-wrap justify-center gap-6 lg:justify-start">
+      <Reviews
+        color="bg-white"
+        stars="✪✪✪✪✪ Bob Williams"
+        title="An absolute breeze to use—simply intuitive!"
+        text="text-black"
+        opinion="I haven't encountered a tool this fluid in a long time. The interface is clean, modern, and everything is exactly where you expect it to be. It has streamlined my workflow from day one. Highly recommended!"
+      />
+
+      <Reviews
+        color="bg-white"
+        stars="✪✪✪✪✪ Martin Smith"
+        title="The gold standard of modern UI/UX"
+        text="text-black"
+        opinion="I'm in love with the minimalist aesthetic and how fast everything loads. You can tell a lot of thought went into the user experience. It's a breath of fresh air compared to the clunky, outdated platforms in this industry."
+      />
+
+      <Reviews
+        color="bg-white"
+        stars="✪✪✪✪✪ Elena Rodríguez"
+        title="My workflow has never been smoother"
+        text="text-black"
+        opinion="What strikes me most is how naturally it fits into my daily routine. It doesn't feel like just another task, it feels like an ally that makes everything easier. Flawless organization."
+      />
+
+      <Reviews
+        color="bg-white"
+        stars="✪✪✪✪✪ Chloe Bennett"
+        title="Beyond my expectations!"
+        text="text-black"
+        opinion="I'll admit I was skeptical at first, but five minutes in and I was hooked. The attention to detail in the user experience is world-class. It just... works."
+      />
+    </div>
+  </section>
+  <section class="mt-30 flex w-full flex-wrap items-center justify-center gap-15 px-4">
+    <h2 class="text-center text-3xl font-bold text-slate-300 md:text-5xl">Our best experts</h2>
+    <Expert
+      image={img1}
+      specialty="WPO Specialist"
+      description="Maximizes loading speeds and optimizes Core Web Vitals to ensure a lightning-fast user
+        experience."
+      name="(Clara White)"
+    />
+    <Expert
+      image={img2}
+      specialty="Performance Marketing Manager"
+      description="Specializing in the intersection of paid media and site speed to lower acquisition costs and maximize return on ad spend (ROAS)."
+      name="(Emily Johnson)"
+      margin="mt-60"
+      transition="transition-all hover:translate-y-[-40px] duration-500"
+    />
+    <Expert
+      image={img3}
+      specialty="Core Web Vitals Strategist"
+      description="Specializes in optimizing user experience metrics to ensure every site meets and exceeds Google's Core Web Vitals thresholds."
+      name="(John Doe)"
+    />
+    <Expert
+      image={img4}
+      specialty="Full-Stack Performance Engineer"
+      description="Expert in backend efficiency and frontend delivery, reducing Time to First Byte (TTFB) and streamlining server-to-client data flow."
+      name="(Jason Duval)"
+      margin="mt-60"
+      transition="transition-all hover:translate-y-[-40px] duration-500"
+    />
+    <Expert
+      image={img5}
+      specialty="FinOps & ROI Specialist"
+      description="Specializing in cloud cost optimization and ROI modeling to ensure that every technical improvement delivers maximum financial efficiency and profitability."
+      name="(Marta García)"
+    />
+  </section>
+  <section
+    class="mt-50 flex w-full flex-col flex-wrap items-center justify-center gap-10 px-4 pb-20 md:flex-row"
+  >
+    <h2 class="mb-10 w-full text-center text-6xl font-bold text-white md:text-8xl">Prices</h2>
+    <div class="mt-20 flex w-full flex-wrap items-start justify-center gap-35 px-6">
+      <Prices
+        title="Basic"
+        description="Best for: Small sites & Startups."
+        features={Basic}
+        price="Price: $149 /mo"
+      />
+
+      <Prices
+        title="Performance Pro"
+        description="Best for: Growing businesses."
+        features={Pro}
+        price="Price: $399 /mo"
+      />
+    </div>
+    <div class="mt-20 flex">
+      <Prices
+        title="Business Elite"
+        description="Best for: Scalable Enterprises."
+        features={Elite}
+        price="Price: $799 /mo"
+      />
+    </div>
+  </section>
+  <script>
+    const player = document.getElementById("mini-video") as HTMLVideoElement;
+
+    if (player) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // 1. Obtenemos la fuente del data-src (o src si ya existe)
+              const sourceUrl = player.getAttribute("data-src") || player.getAttribute("src");
+
+              if (sourceUrl) {
+                player.src = sourceUrl; // Asignamos la fuente real
+                player.muted = true; // OBLIGATORIO para autoplay
+                player.loop = true;
+
+                // 2. Intentamos reproducir
+                player.play().catch((error) => {
+                  console.log("El navegador bloqueó el autoplay:", error);
+                });
+              }
+
+              // 3. Dejamos de observar
+              observer.unobserve(player);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      observer.observe(player);
+    }
+  </script>
+</BaseLayout>

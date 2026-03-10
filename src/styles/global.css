@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Vietnam Pro";
+  src: url("/src/assets/fonts/BeVietnamPro-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,115 @@
+---
+import "../styles/global.css";
+import Facebook from "../components/icons/facebook.astro";
+import Twitter from "../components/icons/twitter.astro";
+import Linkedin from "../components/icons/linkedin.astro";
+import Instagram from "../components/icons/instagram.astro";
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const { title, description, image = "/presentation-image.webp" } = Astro.props;
+
+const canonicalImageURL = new URL(image, Astro.site);
+---
+
+<html lang="es" class="min-h-dvh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <link
+      rel="preload"
+      href="/fonts/BeVietnamPro-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon 32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon 16x16.png" />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://improve-web-template.pages.dev/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={canonicalImageURL} />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://improve-web-template.pages.dev/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={canonicalImageURL} />
+
+    <title>{title}</title>
+
+    <style is:global>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        position: relative;
+      }
+    </style>
+
+    <slot name="head" />
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"></script>
+  </head>
+  <body class="min-h-screen bg-black bg-linear-to-t from-black via-blue-600 to-black">
+    <main>
+      <slot />
+    </main>
+
+    <footer
+      class="mt-20 flex w-full flex-col items-center justify-center gap-10 rounded-t-[50px] bg-white px-8 py-16 md:flex-row md:items-start md:gap-20 md:px-20"
+    >
+      <div class="flex flex-col items-center gap-4 md:items-start">
+        <span
+          class="text-center font-sans text-3xl font-black text-slate-800 md:text-left md:text-5xl"
+        >
+          Promote Company
+        </span>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
+        <span class="cursor-pointer text-xl font-black text-slate-800 hover:underline md:text-2xl">
+          Contact Information
+        </span>
+        <span class="cursor-pointer text-xl font-black text-slate-800 hover:underline md:text-2xl">
+          Privacy Policy
+        </span>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 md:items-start">
+        <span class="text-xl font-black text-slate-800 md:text-2xl"> Follow Us </span>
+
+        <div class="flex w-full items-center justify-center gap-6 p-2 md:justify-start">
+          <a href="#" aria-label="Link Facebook" class="text-black transition-transform hover:scale-110 hover:text-blue-600">
+            <Facebook class="h-8 w-8 md:h-10 md:w-10" />
+          </a>
+          <a href="#" aria-label="Link Twitter" class="text-black transition-transform hover:scale-110 hover:text-sky-500">
+            <Twitter class="h-8 w-8 md:h-10 md:w-10" />
+          </a>
+          <a href="#" aria-label="Link Linkedin" class="text-black transition-transform hover:scale-110 hover:text-blue-800">
+            <Linkedin class="h-8 w-8 md:h-10 md:w-10" />
+          </a>
+          <a href="#" aria-label="Link Instagram" class="text-black transition-transform hover:scale-110 hover:text-pink-600">
+            <Instagram class="h-8 w-8 md:h-10 md:w-10" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
